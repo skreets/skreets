@@ -7,8 +7,105 @@
 		position: fixed;
 
 		&-content {
+			height: 100%;
 			position: relative;
 			z-index: 10;
+      opacity: 0;
+      ._transition-delay(all 550ms ease-in-out, 0);
+
+      &.active {
+        opacity: 1;
+      }
+
+      .tabs {
+      	height: 100%;
+      	display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: center;
+
+        ul {
+          padding: 0;
+          margin: 3rem 0 0;
+          display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+
+          li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            a {
+            	width: 54px;
+            	height: 54px;
+            	display: flex;
+							flex-wrap: wrap;
+							justify-content: center;
+							align-items: center;
+            	border: 0;
+            	font-size: 27px;
+            	border-radius: 100%;
+            	margin: 0 .8rem;
+            	color: rgba(255, 255, 255, .7);
+            	background-color: rgba(0, 0, 0, .2);
+							._transition-delay(all 350ms ease-in-out, 0);
+							
+							&:hover {
+								color: rgba(255, 255, 255, 1);
+								background-color: rgba(0, 0, 0, .4);
+							}
+            }
+          }
+        }
+
+        .item {
+
+        	&-laptop {
+        		width: 630px;
+        		height: 370px;
+        		position: relative;
+        		background: url('../img/device/macbook-pro.png') top center no-repeat;
+
+        		&-frame {
+							width: 479px;
+							height: 301px;
+							position: absolute;
+							top: 28px; left: 76px;
+							overflow: hidden;
+
+							img {
+								max-width: 100%;
+								display: block;
+								margin: 0 0 -1px;
+							}
+        		}
+
+        		&:after {
+        			content: '';
+        			width: 100%;
+        			height: 20px;
+        			display: block;
+        			border-radius: 100%;
+        			background: #000;
+        			opacity: .6;
+        			position: absolute;
+        			bottom: -35px;
+        			._blur(3px);
+        		}
+        	}
+
+        	.mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical, .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical {
+						margin: 3px 0 !important;
+					}
+
+					.mCSB_scrollTools {
+						width: 10px;
+						opacity: 1;
+					}
+        }
+      }
 		}
 
 		&_bg {
@@ -47,7 +144,7 @@
     text-indent: 4rem;
     overflow: hidden;
     white-space: nowrap;
-    z-index: 10;
+    z-index: 999;
 
     &:before {
 			-moz-transition: background-color 0.2s ease-in-out;

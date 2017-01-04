@@ -2,7 +2,24 @@
 	<span class="modal-close"></span>
 
 	<div class="modal-portfolio-content">
-	<img src="skreets/static/img/device/macbook-pro.png" alt="MacBook Pro">
+		<div class="tabs">
+			<ul>
+				<li>
+					<a href="#laptop" class="fa fa-laptop tooltip-bottom" title="Laptop"></a>
+				</li>
+				<li>
+					<a href="http://skycenter.aero" class="fa fa-link tooltip-bottom" title="Перейти на сайт" target="_blank"></a>
+				</li>
+		</ul>
+		<div id="laptop" class="item">
+			<div class="item-laptop">
+				<div class="item-laptop-frame">
+					<img src="skreets/static/photo/portfolio/skycenter/main.jpg">
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
 	<!-- Desktop Laptop Tablet Mobile -->
 	</div>
 
@@ -16,6 +33,30 @@
 	$(document).ready(function(){
 		setTimeout(function() {
 		  $('.modal-portfolio_bg').addClass('active');
-		}, 50)
+		}, 50);
+
+		$('.tabs').tabslet();
+
+		$('body').on('click', '.item', function(){
+			$('.fa-link').addClass('animated bounce');
+			setTimeout(function() {
+			  $('.fa-link').removeClass('animated bounce');
+			}, 1000);
+		});
+
+		$('.item-laptop-frame').mCustomScrollbar({
+			theme: 'minimal-dark'
+		});
+
+		$('.tooltip-bottom').tooltipster({
+			position: 'bottom',
+			contentAsHTML: true,
+		});
+
+		$('.clear').css('display', 'block');
+
+		setTimeout(function() {
+		  $('.modal-portfolio-content').addClass('active');
+		}, 450);
 	});
 </script>

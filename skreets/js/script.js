@@ -8,7 +8,7 @@ $(document).ready(function(){
 		modal: true,
 	});
 	$(document).on('click', '.modal-close', function(e) {
-		$('.modal-portfolio_bg').removeClass('active');
+		$('.modal-portfolio_bg, .modal-portfolio-content').removeClass('active');
 		setTimeout(function() {
 			e.preventDefault();
 			$.magnificPopup.close();
