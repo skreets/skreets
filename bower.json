@@ -20,6 +20,7 @@
     "magnific-popup": "~1.0.0",
     "tooltipster": "~3.3.0",
     "Tabslet": "~1.7",
-    "malihu-custom-scrollbar-plugin": "~3.0"
+    "malihu-custom-scrollbar-plugin": "~3.0",
+    "slick-carousel": "~1.5.9"
   }
 }

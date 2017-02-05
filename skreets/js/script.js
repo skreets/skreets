@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+	var a=Math.round(Math.random() * 3);
+	if(a==2)
+	$('#bg').addClass('four');
+	if(a==1)
+	$('#bg').addClass('two');
+	if(a==3)
+	$('#bg').addClass('three');
+
 	$('.portfolio-modal').magnificPopup({
 		type: 'ajax',
 		alignTop: true,

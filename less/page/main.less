@@ -1,5 +1,6 @@
 @import url(font-awesome.min.css);
 /* Reset */
+	* {outline: none;}
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -160,14 +161,24 @@
 		}
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
-			border-bottom: solid 1px #ffffff;
+			border-left: 0;
 			width: -moz-max-content;
 			width: -webkit-max-content;
 			width: -ms-max-content;
 			width: max-content;
-			padding-bottom: 0.5rem;
-			margin: 0 0 2rem 0;
+			padding-bottom: 0;
+			padding-left: 2rem;
+			margin: 0 0 3rem -2.5rem;
 			position: relative;
+
+			&:before {
+				content: '';
+				width: 3px;
+				height: 18px;
+				position: absolute;
+				top: 8px; left: 0;
+				background-color: #fff;
+			}
 		}
 
 	h1 {
@@ -1032,79 +1043,6 @@
 		line-height: calc(2.75rem - 2px);
 	}
 
-/* BG */
-
-	#bg {
-		-moz-transform: scale(1.0);
-		-webkit-transform: scale(1.0);
-		-ms-transform: scale(1.0);
-		transform: scale(1.0);
-		-webkit-backface-visibility: hidden;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		z-index: 1;
-	}
-
-		#bg:before, #bg:after {
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-
-		#bg:before {
-			-moz-transition: background-color 2.5s ease-in-out;
-			-webkit-transition: background-color 2.5s ease-in-out;
-			-ms-transition: background-color 2.5s ease-in-out;
-			transition: background-color 2.5s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../img/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
-			z-index: 2;
-		}
-
-		#bg:after {
-			-moz-transform: scale(1.125);
-			-webkit-transform: scale(1.125);
-			-ms-transform: scale(1.125);
-			transform: scale(1.125);
-			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
-			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
-			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
-			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../static/img/background/bg.jpg");
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			z-index: 1;
-		}
-
-		body.is-article-visible #bg:after {
-			-moz-transform: scale(1.0825);
-			-webkit-transform: scale(1.0825);
-			-ms-transform: scale(1.0825);
-			transform: scale(1.0825);
-			-moz-filter: blur(0.2rem);
-			-webkit-filter: blur(0.2rem);
-			-ms-filter: blur(0.2rem);
-			filter: blur(0.2rem);
-		}
-
-		body.is-loading #bg:before {
-			background-color: #000000;
-		}
-
 /* Wrapper */
 
 	#wrapper {
@@ -1448,7 +1386,8 @@
 			position: relative;
 			width: 40rem;
 			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.85);
+			background-color: rgba(0, 0, 0, .5);
+			// background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 1px;
 			opacity: 0;
 
@@ -1484,6 +1423,7 @@
 				.career {
 					padding-top: 15px;
 					padding-bottom: 5px;
+					margin-bottom: 10px;
 					border-left: 2px solid #fff;
 
 					li {
@@ -1495,6 +1435,7 @@
 							&.date {
 								font: 18px "SourceSansProlight";
 								display: block;
+								margin-bottom: 5px;
 							}
 
 							&.sub {
@@ -1523,6 +1464,10 @@
 								font-family: "SourceSansProlight";
 							}
 						}
+
+						&:last-child {
+							margin-bottom: 10px;
+						}
 					}
 				}
 
@@ -1543,10 +1488,43 @@
 						position: relative;
 						outline: none;
 
+						div {
+							position: absolute;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 100%;
+							height: 100%;
+							top: 0; left: 0;
+							background: rgba(0, 0, 0, .4);
+							opacity: 1;
+							._transition-delay(all 450ms ease-in-out, 0);
+
+							img {
+								max-width: 50%;
+								// max-height: 25%;
+								opacity: 1;
+								._transition-delay(all 450ms ease-in-out, 450ms);
+							}
+						}
+
 						img {
 							max-width: 100%;
 							display: block;
 							margin: 0;
+						}
+
+						&:hover {
+
+							div {
+								opacity: 0;
+								._transition-delay(all 450ms ease-in-out, 450ms);
+
+								img {
+									opacity: 0;
+									._transition-delay(all 450ms ease-in-out, 0);
+								}
+							}
 						}
 					}
 				}
@@ -1644,6 +1622,22 @@
 						flex-wrap: wrap;
 						flex-direction: column;
 						justify-content: flex-start;
+
+						.item {
+							width: 100%;
+						}
+					}
+
+					.career {
+
+						.sub {
+
+							.post {
+								display: block;
+								padding-left: 0 !important;
+								padding-bottom: 5px;
+							}
+						}
 					}
 
 					.icoon {
@@ -1660,6 +1654,19 @@
 							width: 100%;
 							height: auto;
 						}
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 350px) {
+
+			.career {
+
+				.sub {
+
+					&:after {
+						left: -20px !important;
 					}
 				}
 			}
@@ -1702,6 +1709,77 @@
 			opacity: 0;
 		}
 
+// Portfolio
+#portfolio {
+	padding-bottom: 0 !important;
+	margin-bottom: 0;
 
+	h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+
+		&:before {
+			background-color: @green;
+		}
+	}
+}
+
+// About
+#about {
+
+	h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+
+		&:before {
+			background-color: @red-dark;
+		}
+
+		&:nth-of-type(2) {
+
+			&:before {
+				background-color: @purple;
+			}
+		}
+	}
+
+	.article {
+
+		&-box {
+
+			p {
+				line-height: 20px;
+				padding-left: 25px;
+				margin-bottom: 10px;
+				position: relative;
+
+				.fa {
+					position: absolute;
+					top: 3px; left: 0;
+				}
+			}
+
+			.career {
+
+				li {
+
+					span {
+
+						&.sub {
+							line-height: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Blog
+#blog {
+
+	h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+
+		&:before {
+			background-color: @blue;
+		}
+	}
+}
 
 

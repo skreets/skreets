@@ -3,22 +3,35 @@
 
 	<div class="modal-portfolio-content">
 		<div class="tabs">
-			<ul>
-				<li>
-					<a href="#laptop" class="fa fa-laptop tooltip-bottom" title="Laptop"></a>
-				</li>
-				<li>
-					<a href="http://skycenter.aero" class="fa fa-link tooltip-bottom" title="Перейти на сайт" target="_blank"></a>
-				</li>
-		</ul>
-		<div id="laptop" class="item">
-			<div class="item-laptop">
-				<div class="item-laptop-frame">
-					<img src="skreets/static/photo/portfolio/skycenter/main.jpg">
+			<!--#include virtual="nav.html" -->
+		<div id="desktop" class="item">
+			<div class="item-desktop">
+				<div class="item-desktop-frame">
+					<img src="skreets/static/photo/portfolio/skycenter/main-d.jpg">
 				</div>
 			</div>
 		</div>
-		<div class="clear"></div>
+		<div id="laptop" class="item">
+			<div class="item-laptop">
+				<div class="item-laptop-frame">
+					<img src="skreets/static/photo/portfolio/skycenter/main-l.jpg">
+				</div>
+			</div>
+		</div>
+		<div id="tablet" class="item">
+			<div class="item-tablet _b">
+				<div class="item-tablet-frame">
+					<img src="skreets/static/photo/portfolio/skycenter/main-l.jpg">
+				</div>
+			</div>
+		</div>
+		<div id="phone" class="item">
+			<div class="item-phone _b">
+				<div class="item-phone-frame">
+					<img src="skreets/static/photo/portfolio/skycenter/main-l.jpg">
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- Desktop Laptop Tablet Mobile -->
 	</div>
@@ -35,7 +48,11 @@
 		  $('.modal-portfolio_bg').addClass('active');
 		}, 50);
 
-		$('.tabs').tabslet();
+		$('.tabs').tabslet({
+			mouseevent: 'click',
+			attribute: 'href',
+			animation: true
+		});
 
 		$('body').on('click', '.item', function(){
 			$('.fa-link').addClass('animated bounce');
@@ -44,7 +61,23 @@
 			}, 1000);
 		});
 
+		var link = 'skycenter.aero';
+
+		$('.tabs ul li:last-child').after('<li><a href="http://'+link+'" class="fa fa-link tooltip-bottom" target="_blank" title="Перейти на сайт"></a></li>');
+
+		$('.item-desktop-frame').mCustomScrollbar({
+			theme: 'minimal-dark'
+		});
+
 		$('.item-laptop-frame').mCustomScrollbar({
+			theme: 'minimal-dark'
+		});
+
+		$('.item-tablet-frame').mCustomScrollbar({
+			theme: 'minimal-dark'
+		});
+
+		$('.item-phone-frame').mCustomScrollbar({
 			theme: 'minimal-dark'
 		});
 
@@ -52,8 +85,6 @@
 			position: 'bottom',
 			contentAsHTML: true,
 		});
-
-		$('.clear').css('display', 'block');
 
 		setTimeout(function() {
 		  $('.modal-portfolio-content').addClass('active');
