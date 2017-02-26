@@ -1,0 +1,124 @@
+#EXTM3U
+#EXTINF:-1 group-title="Общественные" ,Первый канал
+http://80.77.52.6:8181/udp/230.0.9.28:12345
+#EXTINF:-1 group-title="Общественные" ,ТНТ
+http://80.77.52.6:8181/udp/230.0.9.34:12345
+#EXTINF:-1 group-title="Общественные" ,ТНТ
+http://80.77.52.6:8181/udp/226.0.1.6:12345
+#EXTINF:-1 group-title="Общественные" ,ТНТ4
+http://80.77.52.6:8181/udp/231.0.9.43:12345
+#EXTINF:-1 group-title="Общественные" ,ТНТ4
+http://80.77.52.6:8181/udp/230.0.2.53:12345
+#EXTINF:-1 group-title="Общественные" ,РЕН ТВ
+http://80.77.52.6:8181/udp/230.0.9.29:12345
+#EXTINF:-1 group-title="Общественные" ,СТС
+http://80.77.52.6:8181/udp/230.0.9.36:12345
+#EXTINF:-1 group-title="Общественные" ,СТС
+http://80.77.52.6:8181/udp/230.0.5.26:12345
+#EXTINF:-1 group-title="Общественные" ,2X2
+http://91.214.163.250:9999/udp/239.0.0.161:4000
+
+#EXTINF:-1 group-title="Фильмы и сериалы" ,Paramount Comedy HD
+http://82.200.127.58:8080/udp/233.12.144.83:5050
+#EXTINF:-1 group-title="Фильмы и сериалы" ,НТВ+ Кинохит
+http://80.77.52.6:8181/udp/226.0.5.15:12345
+#EXTINF:-1 group-title="Фильмы и сериалы" ,TV1000 Megahit HD
+http://80.77.52.6:8181/udp/231.0.9.3:12345
+#EXTINF:-1 group-title="Фильмы и сериалы" ,TV1000 Premium HD
+http://80.77.52.6:8181/udp/231.0.9.4:12345
+#EXTINF:-1 group-title="Фильмы и сериалы" ,TV1000 Comedy HD
+http://80.77.52.6:8181/udp/231.0.9.2:12345
+#EXTINF:-1 group-title="Фильмы и сериалы" ,КИНОПРЕМЬЕРА HD
+http://91.214.163.250:9999/udp/239.0.0.116:4000
+
+#EXTINF:-1 group-title="Познавательные" ,24 Техно
+http://80.77.52.6:8181/udp/230.0.3.42:12345
+#EXTINF:-1 group-title="Познавательные" ,Animal planet HD
+http://80.77.52.6:8181/udp/231.0.9.56:12345
+#EXTINF:-1 group-title="Познавательные" ,Discovery Science
+http://80.77.52.6:8181/udp/231.0.9.52:12345
+#EXTINF:-1 group-title="Познавательные" ,Discovery Channel HD
+http://91.214.163.250:9999/udp/239.0.0.119:4000
+#EXTINF:-1 group-title="Познавательные" ,DISCOVERY WORLD
+http://176.120.119.93:6085/udp/239.0.0.47:4000
+#EXTINF:-1,NATIONAL GEOGRAPHIC HD
+http://176.120.119.93:6085/udp/239.0.1.101:4000
+#EXTINF:-1 group-title="Познавательные" ,Viasat Explorer (Общественные)
+http://80.77.52.6:8181/udp/231.0.21.12:12345
+#EXTINF:-1 group-title="Познавательные" ,Viasat History
+http://80.77.52.6:8181/udp/231.0.21.13:12345
+#EXTINF:-1 group-title="Познавательные" ,Viasat Nature/History HD
+http://80.77.52.6:8181/udp/231.0.21.18:12345
+#EXTINF:-1 group-title="Познавательные" ,DTX
+http://80.77.52.6:8181/udp/231.0.9.51:12345
+#EXTINF:-1 group-title="Познавательные" ,Ocean TV
+http://80.77.52.6:8181/udp/231.0.9.17:12345
+#EXTINF:-1 group-title="Познавательные" ,Galaxy-TV
+http://80.77.52.6:8181/udp/230.0.9.45:12345
+#EXTINF:-1 group-title="Познавательные" ,Наука 2.0
+http://91.214.163.250:9999/udp/239.0.0.40:4000
+#EXTINF:-1 group-title="Познавательные" ,Nat Geo Wild
+http://176.120.119.93:6085/udp/239.0.0.51:4000
+#EXTINF:-1 group-title="Познавательные" ,Nat Geo HD
+http://176.120.119.93:6085/udp/239.0.0.168:4000
+#EXTINF:-1 group-title="Познавательные" ,Nat Geo
+http://176.120.119.93:6085/udp/239.0.0.35:4000
+
+#EXTINF:0 group-title="Спорт" ,Eurosport 1 HD
+http://5.128.78.16:81/udp/239.1.11.6:1234
+#EXTINF:0 group-title="Спорт" ,Eurosport 1 HD
+http://5.128.70.48:81/udp/239.1.11.6:1234
+#EXTINF:0 group-title="Спорт" ,Eurosport 1 HD
+http://37.205.74.162:8888/udp/239.54.7.174:1224
+#EXTINF:0 group-title="Спорт" ,Eurosport 1 HD
+http://0E9B00ECD326CCAC:@t.kraslan.ru/eurosporthd?krasview.ru
+#EXTINF:0 group-title="Спорт" ,Eurosport 1 HD
+http://cdn0.4network.tv/master_71.m3u8
+#EXTINF:0 group-title="Спорт" ,Eurosport 1 HD
+http://37.205.94.97:81/udp/239.54.7.174:1224
+#EXTINF:0 group-title="Спорт" ,Eurosport 1 HD
+http://95.47.18.243:34040/udp/239.72.6.50:1234
+#EXTINF:0 group-title="Спорт" ,Eurosport 1 HD
+http://c80a4aaa.ottclub.mobi/iptv/P66LY9T4SQKMKG/228/index.m3u8
+#EXTINF:0 group-title="Спорт" ,Eurosport 1 HD
+http://176.118.154.243:81/udp/231.1.1.30:1234
+#EXTINF:0 group-title="Спорт" ,Eurosport 2 HD
+http://31.128.157.197:4022/udp/239.1.13.2:1234
+#EXTINF:0 group-title="Спорт" ,Eurosport 2 HD
+http://cdn0.4network.tv/master_1460.m3u8
+#EXTINF:0 group-title="Спорт" ,Eurosport 2 HD
+http://37.192.93.20:81/udp/239.1.18.2:1234
+#EXTINF:0 group-title="Спорт" ,Eurosport 2 HD
+http://37.192.93.20:81/udp/239.1.18.2:1234
+#EXTINF:0 group-title="Спорт" ,Eurosport 2 HD
+http://95.47.18.243:34040/udp/239.72.6.51:1234
+#EXTINF:0 group-title="Спорт" ,Eurosport 2 HD
+http://37.192.93.20:81/udp/239.1.18.2:1234
+#EXTINF:0 group-title="Спорт" ,EuroSport HD
+http://origin3.tomsk.ertelecom.ru/content/private/r964991sd2500000/c3d7d9ac9a8eade4c469c8f261cea5368c118be3/track_3_2000/playlist.m3u8
+#EXTINF:0 group-title="Спорт" ,EuroSport HD
+http://37.192.93.20:81/udp/239.1.11.6:1234
+#EXTINF:0 group-title="Спорт" ,EuroSport HD
+http://37.192.11.15:81/udp/239.1.11.6:1234
+#EXTINF:0 group-title="Спорт" ,EuroSport HD
+http://37.192.93.20:81/udp/239.1.11.6:1234
+#EXTINF:0 group-title="Спорт" ,EuroSport HD
+http://37.192.93.20:81/udp/239.1.11.6:1234
+#EXTINF:0 group-title="Спорт" ,EuroSport HD
+http://origin3.tomsk.ertelecom.ru/content/private/s147213/d3720264/r964991sd2500000/c3d7d9ac9a8eade4c469c8f261cea5368c118be3/playlist.m3u8
+#EXTINF:0 group-title="Спорт" ,Russian Extreme
+http://37.49.212.64:81/udp/239.54.7.171:1224
+#EXTINF:0 group-title="Спорт" ,Russian Extreme
+http://92.38.70.147:34040/udp/224.200.100.119:1234
+#EXTINF:-1 group-title="Спорт" ,EXTREME SPORTS CHANNEL
+http://176.120.119.93:6085/udp/239.0.0.50:4000
+#EXTINF:0 group-title="Спорт" ,Trace Sport Stars HD
+http://176.118.154.243:81/udp/239.255.70.111:3376
+#EXTINF:0 group-title="Спорт" ,Trace Sport Stars HD
+http://85.132.59.163:8080/play/a01n
+#EXTINF:0 group-title="Спорт" ,Trace Sport Stars HD
+http://c80a4aaa.ottclub.mobi/iptv/P66LY9T4SQKMKG/234/index.m3u8
+#EXTINF:0 group-title="Спорт" ,VIASAT SPORT HD
+http://c80a4aaa.ottclub.mobi/iptv/P66LY9T4SQKMKG/208/index.m3u8
+#EXTINF:0 group-title="Спорт" ,VIASAT SPORT HD
+http://176.118.154.243:81/udp/239.255.70.119:3376

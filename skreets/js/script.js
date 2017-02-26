@@ -8,6 +8,8 @@ $(document).ready(function(){
 	if(a==3)
 	$('#bg').addClass('three');
 
+	$('.page-main').show();
+
 	$('.portfolio-modal').magnificPopup({
 		type: 'ajax',
 		alignTop: true,

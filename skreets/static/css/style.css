@@ -6885,6 +6885,9 @@ body.is-loading #footer {
 #blog h6.major:before {
   background-color: #0097d9;
 }
+.page-main {
+  display: none;
+}
 .modal-portfolio {
   overflow: hidden;
   top: 0;
