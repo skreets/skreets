@@ -38,7 +38,7 @@ header {
 
 	nav {
 		position: absolute;
-		top: 19px; right: 45px;
+		top: 20px; right: 45px;
 		@include transition;
 
 		ul {
@@ -53,7 +53,7 @@ header {
 
   			a {
   				color: #fff;
-  				font: 12px $fl;
+  				font: 12px $pn-l;
   				text-transform: uppercase;
   				text-decoration: none;
   				letter-spacing: 1px;
@@ -199,7 +199,7 @@ header {
 
 					a {
 						color: #333;
-						font: 12px $fn;
+						font: 12px $pn-l;
 	  				text-transform: uppercase;
 	  				text-decoration: none;
 	  				letter-spacing: 1px;
@@ -244,7 +244,7 @@ header {
 }
 
 footer {
-	font: 14px $fl;
+	font: 12px $pn-l;
 	padding-bottom: 3vh;
 }
 

@@ -26,17 +26,17 @@
 
 		h1 {
 			color: #fff;
-			font: 80px/80px $fn;
+			font: 80px/80px $pn-t;
 			text-transform: uppercase;
 			position: relative;
 			z-index: 2;
 
 			@include respond-to(mobile) {
-				font: 60px/60px $fn;
+				font: 60px/60px $pn-t;
 			}
 
 			@include respond-to(tablet) {
-				font: 80px/80px $fn;
+				font: 80px/80px $pn-t;
 			}
 
 			&:after {
@@ -69,16 +69,16 @@
 		@include transition(all, 550ms, ease-in-out);
 
 		h2 {
-			font: 40px/40px $fn;
+			font: 40px/40px $pn-r;
 			text-align: center;
 			margin: 46px 0 18px;
 
 			@include respond-to(mobile) {
-				font: 28px/32px $fn;
+				font: 28px/32px $pn-r;
 			}
 
 			@include respond-to(tablet) {
-				font: 40px/40px $fn;
+				font: 40px/40px $pn-r;
 			}
 		}
 
@@ -117,7 +117,7 @@
 		}
 
 		h2 {
-			font: 40px/40px $fn;
+			font: 40px/40px $pn-r;
 			text-align: center;
 		}
 
@@ -238,7 +238,7 @@
 		@include transition(all, 550ms, ease-in-out);
 
 		h2 {
-			font: 80px/80px $fn;
+			font: 80px/80px $pn-t;
 			text-transform: uppercase;
 			position: relative;
 			text-align: center;
@@ -247,11 +247,11 @@
 			z-index: 2;
 
 			@include respond-to(mobile) {
-				font: 60px/60px $fn;
+				font: 60px/60px $pn-t;
 			}
 
 			@include respond-to(tablet) {
-				font: 80px/80px $fn;
+				font: 80px/80px $pn-t;
 			}
 
 			&:after {
@@ -359,14 +359,14 @@
 
 						&-company {
 							color: #333;
-							font: 36px/11px $fn;
+							font: 34px/11px $pn-r;
 
 							@include respond-to(mobile) {
-								font: 26px/11px $fn;
+								font: 26px/11px $pn-r;
 							}
 
 							@include respond-to(tablet) {
-								font: 36px/11px $fn;
+								font: 36px/11px $pn-r;
 							}
 
 							span {
@@ -460,7 +460,7 @@
 	}
 
 	footer {
-		font-family: $fn;
+		font-family: $pn-r;
 		text-align: center;
 		padding-bottom: 20px;
 	}

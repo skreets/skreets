@@ -52,7 +52,7 @@ var config = {
 	server: {
 		baseDir: "./prod"
 	},
-	tunnel: true,
+	// tunnel: true,
 	host: 'localhost',
 	port: 8000,
 	logPrefix: "Frontend_Devil"
