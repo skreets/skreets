@@ -1,0 +1,259 @@
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+body {
+	color: #fff;
+	font-family: $rs-l;
+	@include gradient-vertical(#123d81, #021130);
+}
+
+::selection {
+	color: $green;
+	background: transparent;
+}
+::-moz-selection {
+	color: $green;
+	background: transparent;
+}
+::-webkit-selection {
+	color: $green;
+	background: transparent;
+}
+
+a {
+
+	&[href^="http://savefrom.net/"] {display: none !important;}
+}
+
+header {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	z-index: 5;
+	@include rgba-bg(background, $bg, 0);
+	@include transition(all, 550ms, ease-in-out);
+
+	nav {
+		position: absolute;
+		top: 19px; right: 45px;
+		@include transition;
+
+		ul {
+			position: relative;
+			display: flex;
+  		align-items: center;
+
+  		li {
+  			margin-right: 0px;
+  			opacity: 0;
+  			@include transition(all, 550ms, ease-in-out);
+
+  			a {
+  				color: #fff;
+  				font: 12px $fl;
+  				text-transform: uppercase;
+  				text-decoration: none;
+  				letter-spacing: 1px;
+  				display: inline-block;
+  				position: relative;
+  				@include transition(all, 550ms, ease-in-out);
+
+  				&:after {
+  					content: '';
+  					width: 0;
+  					height: 2px;
+  					display: block;
+  					margin: 1px auto 0;
+  					background: #fff;
+  					bottom: 0;
+  					opacity: 0;
+  					@include transition(all, 550ms, ease-in-out);
+  				}
+
+  				&:hover {
+
+  					&:after {
+  						width: 100%;
+  						opacity: 1;
+  					}
+  				}
+  			}
+
+  			&.active {
+
+  				a {
+  					cursor: default;
+
+  					&:after {
+  						width: 100%;
+  						opacity: 1;
+  					}
+  				}
+  			}
+  		}
+		}
+
+		&.active {
+
+			ul {
+
+				li {
+					opacity: 1;
+					margin-right: 15px;
+
+					@include respond-to(mobile) {
+						margin-right: 10px;
+					}
+
+					@include respond-to(tablet) {
+						margin-right: 15px;
+					}
+				}
+			}
+		}
+	}
+
+	.burger {
+		width: 40px;
+		height: 40px;
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		z-index: 1;
+		opacity: .5;
+		@include transition;
+
+		&-wrapp {
+			width: 25px;
+			height: 1px;
+			display: block;
+			margin: 5px auto;
+			background: #fff;
+			@include transition;
+
+
+			&:before {
+				content: '';
+				width: 25px;
+  			height: 1px;
+  			display: block;
+  			top: 12px;
+  			position: absolute;
+  			background: #fff;
+  			@include transition;
+			}
+
+			&:after {
+				content: '';
+				width: 25px;
+  			height: 1px;
+  			display: block;
+  			bottom: 11px;
+  			position: absolute;
+  			background: #fff;
+  			@include transition;
+			}
+		}
+
+		&.active {
+			opacity: 1;
+
+			.burger-wrapp {
+				background: transparent;
+
+				&:before {
+					width: 15px;
+					top: 13px;
+					@include transform(rotate(-45deg));
+				}
+
+				&:after {
+					width: 15px;
+					bottom: 15px;
+					@include transform(rotate(45deg));
+				}
+			}
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&.fixed {
+
+		nav {
+
+			ul {
+
+				li {
+
+					a {
+						color: #333;
+						font: 12px $fn;
+	  				text-transform: uppercase;
+	  				text-decoration: none;
+	  				letter-spacing: 1px;
+
+	  				&:after {
+	  					background: #333;
+	  				}
+					}
+				}
+			}
+		}
+
+		.burger-wrapp {
+			background: #333;
+
+			&:before, &:after {
+				background: #333;
+			}
+		}
+
+		&.active {
+			@include rgba-bg(background, $bg, 1);
+		}
+	}
+}
+
+.container {
+	@include respond-to(mobile) {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	@include respond-to(laptop) {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	@include respond-to(desktop) {
+		width: 1200px;
+		margin: 0 auto;
+	}
+}
+
+footer {
+	font: 14px $fl;
+	padding-bottom: 3vh;
+}
+
+.full {
+	width: 100%;
+	height: 100%;
+
+	body {
+		width: 100%;
+		height: 100%;
+	}
+}

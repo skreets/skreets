@@ -1,0 +1,25 @@
+@import "../../../node_modules/sass-font-face/_font-face.scss";
+
+$fn: 'Futura Normal';
+$fl: 'Futura Light';
+ 
+@include font-face($fn, '../fonts/futura/', 'FuturaNormal', 'FuturaNormal');
+@include font-face($fl, '../fonts/futura/', 'FuturaLight', 'FuturaLight');
+
+$rs-r: 'RobotoSlab';
+$rs-b: 'RobotoSlab Bold';
+$rs-l: 'RobotoSlab Light';
+$rs-t: 'RobotoSlab Thin';
+ 
+@include font-face($rs-r, '../fonts/roboto-slab/', 'RobotoSlab-Regular', 'RobotoSlab-Regular');
+@include font-face($rs-b, '../fonts/roboto-slab/', 'RobotoSlab-Bold', 'RobotoSlab-Bold');
+@include font-face($rs-l, '../fonts/roboto-slab/', 'RobotoSlab-Light', 'RobotoSlab-Light');
+@include font-face($rs-t, '../fonts/roboto-slab/', 'RobotoSlab-Thin', 'RobotoSlab-Thin');
+
+$icon: 'skreets[FontsIcon]';
+$icon-design:  '\e900';
+$icon-html: 	 '\e901';
+$icon-code:		 '\e902';
+$icon-service: '\e903';
+
+@include font-face($icon, '../fonts/icon/', 'icon', 'icon');

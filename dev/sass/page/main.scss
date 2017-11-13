@@ -1,0 +1,128 @@
+.main-page {
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+	background-image: url('../img/bg/main.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+
+	section {
+		text-align: center;
+		margin-top: 18vh;
+
+		h1 {
+			font: 70px $fl;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: -.05em;
+			margin-top: -40px;
+			margin-bottom: 40px;
+			opacity: 0;
+			@include transition(all, 550ms, ease-in-out);
+
+			&.active {
+				opacity: 1;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+			@include respond-to(mobile) {
+				font-size: 30px;
+			}
+
+			@include respond-to(tablet) {
+				font-size: 55px;
+			}
+		}
+
+		p {
+			font: 20px $fl;
+			text-align: center;
+			text-transform: uppercase;
+			display: inline-block;
+			position: relative;
+
+			@include respond-to(mobile) {
+				font-size: 14px;
+			}
+
+			@include respond-to(tablet) {
+				font-size: 24px;
+			}
+
+			span {
+				position: relative;
+				display: inline-block;
+				opacity: 0;
+				margin-top: 20px;
+				@include transition(all, 550ms, ease-in-out);
+
+				&.active {
+					opacity: 1;
+					margin-top: 0;
+				}
+
+				&:after {
+					content: '•';
+					font-size: 10px;
+					display: inline-block;
+					margin: 6px 15px 0;
+					vertical-align: top;
+
+					@include respond-to(mobile) {
+						margin: 3px 5px 0;
+					}
+
+					@include respond-to(tablet) {
+						margin: 6px 10px 0;
+					}
+				}
+
+				&:last-child {
+
+					&:after {
+						display: none;
+					}
+				}
+			}
+
+			&:before {
+				content: '';
+				width: 0%;
+				height: 1px;
+				display: block;
+				margin: 13px auto 18px;
+				background: #fff;
+				opacity: 0;
+				@include transition(all, 550ms, ease-in-out);
+			}
+
+			&.active {
+
+				&:before {
+					width: 100%;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	header {
+		opacity: 1;
+		@include rgba-bg(background, $bg, 0);
+		@include transition(all, 550ms, ease-in-out);
+	}
+
+	footer {
+		opacity: 0;
+		margin-bottom: -20px;
+		@include transition(all, 550ms, ease-in-out);
+
+		&.active {
+			opacity: 1;
+			margin-bottom: 0;
+		}
+	}
+}
