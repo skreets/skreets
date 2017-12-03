@@ -11,16 +11,16 @@ body {
 }
 
 ::selection {
-	color: $green;
-	background: transparent;
+	color: #fff;
+	background: #333;
 }
 ::-moz-selection {
-	color: $green;
-	background: transparent;
+	color: #fff;
+	background: #333;
 }
 ::-webkit-selection {
-	color: $green;
-	background: transparent;
+	color: #fff;
+	background: #333;
 }
 
 a {
@@ -240,6 +240,151 @@ header {
 	@include respond-to(desktop) {
 		width: 1200px;
 		margin: 0 auto;
+	}
+}
+
+.paginator {
+
+	ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		li {
+
+			a {
+				color: #333;
+				font: 50px/50px $pn-t;
+				padding: 0 25px;
+				position: relative;
+				text-decoration: none;
+
+				@include respond-to(mobile) {
+					font: 40px/40px $pn-t;
+					padding: 0 15px;
+				}
+
+				@include respond-to(tablet) {
+					font: 50px/50px $pn-t;
+					padding: 0 25px;
+				}
+
+				&:after {
+					content: '';
+					width: 0%;
+					height: 3px;
+					display: block;
+					margin: 10px auto 0;
+					opacity: 0;
+					background-color: #333;
+					@include transition(all, 350ms, ease-in-out);
+
+					@include respond-to(mobile) {
+						margin: 3px auto 0;
+					}
+
+					@include respond-to(tablet) {
+						margin: 10px auto 0;
+					}
+				}
+
+				&:hover, &.active {
+
+					&:after {
+						width: 25%;
+						opacity: 1;
+					}
+				}
+			}
+
+			&.control {
+
+				&:nth-of-type(2), &:nth-last-of-type(2) {
+
+					a {
+						font-size: 0;
+					}
+				}
+
+				&:nth-of-type(2) {
+
+					a {
+						position: relative;
+
+						&:after {
+							content: $icon-arrow-light;
+							width: 36px;
+							height: 36px;
+							font: 14px/35px $icon;
+							text-align: center;
+							color: #333;
+							display: block;
+							position: absolute;
+							top: -62px; left: 0;
+							opacity: 1;
+							background-color: transparent;
+							@include transform(rotate(180deg));
+
+							@include respond-to(mobile) {
+								top: -47px;
+							}
+
+							@include respond-to(tablet) {
+								top: -52px;
+							}
+						}
+
+						&:hover {
+
+							&:after {
+								color: #999;
+							}
+						}
+					}
+				}
+
+				&:nth-last-of-type(2) {
+
+					a {
+						position: relative;
+
+						&:after {
+							content: $icon-arrow-light;
+							width: 36px;
+							height: 36px;
+							font: 14px/35px $icon;
+							text-align: center;
+							color: #333;
+							display: block;
+							position: absolute;
+							top: -60px; left: 0;
+							opacity: 1;
+							background-color: transparent;
+							@include transform(rotate(0deg));
+
+							@include respond-to(mobile) {
+								top: -45px;
+							}
+
+							@include respond-to(tablet) {
+								top: -52px;
+							}
+						}
+
+						&:hover {
+
+							&:after {
+								color: #999;
+							}
+						}
+					}
+				}
+
+				&:first-child, &:last-child {
+					display: none;
+				}
+			}
+		}
 	}
 }
 

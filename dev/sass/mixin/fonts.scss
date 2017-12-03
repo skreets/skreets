@@ -35,9 +35,11 @@ $rs-t: 'RobotoSlab Thin';
 
 
 $icon: 'skreets[FontsIcon]';
-$icon-design:  '\e900';
-$icon-html: 	 '\e901';
-$icon-code:		 '\e902';
-$icon-service: '\e903';
+$icon-design:  		 '\e900';
+$icon-html: 	 		 '\e901';
+$icon-code:		 		 '\e902';
+$icon-service: 		 '\e903';
+$icon-arrow-light: '\e904';
+$icon-search:			 '\e905';
 
 @include font-face($icon, '../fonts/icon/', 'icon', 'icon');

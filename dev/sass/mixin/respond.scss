@@ -1,7 +1,7 @@
-$mobile: 768px;
-$laptop: 960px;
+$mobile:  768px;
+$laptop:  960px;
 $desktop: 1200px;
-$mac: 1600px;
+$mac:     1600px;
 
 @mixin respond-to($media) {
 
@@ -15,6 +15,10 @@ $mac: 1600px;
 
   @else if $media == laptop {
     @media only screen and (min-width: $laptop + 1) { @content; }
+  }
+
+  @else if $media == notebook {
+    @media only screen and (min-width: $laptop + 1)  and (max-width: $desktop) { @content; }
   }
 
   @else if $media == desktop {

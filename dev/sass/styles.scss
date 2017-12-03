@@ -1,5 +1,3 @@
-// Library
-
 // Variables
 @import 'variables/color';
 
@@ -14,3 +12,8 @@
 @import 'page/layout';
 @import 'page/main';
 @import 'page/resume';
+@import 'page/blog';
+
+// Plugin
+@import '../../bower_components/magnific-popup/dist/magnific-popup.css';
+@import '../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
