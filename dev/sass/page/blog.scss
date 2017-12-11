@@ -11,6 +11,8 @@
 			text-align: center;
 			padding-top: 30px;
 			opacity: 0;
+			position: relative;
+			z-index: 20;
 			@include transition(all, 550ms, ease-in-out);
 
 			@include respond-to(mobile) {
@@ -198,7 +200,7 @@
 					}
 				}
 
-				&.blue {
+				&:nth-of-type(1) {
 					align-items: flex-start;
 
 					p {
@@ -221,14 +223,14 @@
 					}
 				}
 
-				&.green {
-					align-items: flex-end;
+				&:nth-of-type(2) {
+					align-items: flex-start;
 
 					p {
-						margin-bottom: 33px;
+						margin-top: 218px;
 
 						span {
-							margin-top: -13px;
+							margin-bottom: -50px;
 						}
 
 						a {
@@ -239,8 +241,6 @@
 						}
 
 						&:after {
-							top: auto;
-							bottom: -3px;
 							@include gradient-diogonal-up($green-3, $green-2);
 						}
 					}
@@ -332,6 +332,10 @@
 
 							img {
 								max-width: 100%;
+
+								&.crop {
+									display: none;
+								}
 							}
 						}
 						
@@ -644,7 +648,7 @@
 			&-tag {
 				width: 50vw;
 				position: relative;
-				z-index: 2;
+				z-index: 12;
 
 				@include respond-to(mobile) {
 					width: 100%;
@@ -844,6 +848,7 @@
 
 				a {
 					position: relative;
+					display: block;
 
 					img {
 						max-width: 100%;
@@ -1388,6 +1393,10 @@
 				}
 			}
 		}
+
+		&.active {
+			z-index: 15;
+		}
 	}
 
 	footer {
@@ -1802,6 +1811,25 @@
 
 			&.active {
 				background-color: $bg;
+
+				nav {
+
+					ul {
+
+						li {
+
+							a {
+								
+								&:hover {
+
+									&:after {
+										background-color: #333; 
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 
@@ -1852,6 +1880,25 @@
 
 				&.active {
 					background-color: $bg;
+
+					nav {
+
+						ul {
+
+							li {
+
+								a {
+									
+									&:hover {
+
+										&:after {
+											background-color: #333; 
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -1919,6 +1966,26 @@
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.desktop.landscape, .tablet.landscape {
+
+	.category {
+
+		.post {
+
+			.img {
+
+				img {
+					display: none;
+
+					&.crop {
+						display: block;
 					}
 				}
 			}
