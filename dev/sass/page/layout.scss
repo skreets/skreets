@@ -388,6 +388,137 @@ header {
 	}
 }
 
+.comments {
+	margin: 36px auto -30px;
+	padding-top: 31px;
+
+	.hc {
+
+		&__right {
+			padding: 0;
+		}
+
+		&__avatar {
+
+			img {
+				box-shadow: 0 0 2px rgba(0,0,0,0), 0 2px 4px rgba(0,0,0,0);
+			}
+		}
+
+		&__top {
+			display: none;
+		}
+
+		&__menu {
+			padding-top: 0;
+			margin-top: 0;
+
+			&__line {
+				display: none;
+			}
+
+			&__item {
+				font-family: $pn-sb;
+				font-size: 16px;
+				text-transform: uppercase;
+			}
+
+			&__count {
+				font-size: 13px;
+				font-family: $pn-b;
+				display: inline-block;
+				vertical-align: top;
+				margin-top: 9px;
+			}
+
+			&__comment {
+
+				&__popup {
+					border: 0;
+					box-shadow: 0px 2px 2px 0px rgba(0,0,0,.1);
+				}
+			}
+		}
+
+		&__reply {
+
+			&__box {
+
+				&__textarea, textarea {
+					border: 0;
+					border-radius: 1px;
+					box-shadow: 0 0 3px rgba(0,0,0,.01), 0 1px 1px rgba(0,0,0,.04);
+
+					&[active=true] {
+						box-shadow: 0 0 3px rgba(0,0,0,.01), 0 1px 1px rgba(0,0,0,.04);
+					}
+				}
+			}
+		}
+
+		&__form {
+			margin-bottom: -40px;
+
+			&__send {
+				color: #333;
+				font: 24px $pn-r;
+				background: transparent;
+				padding: 0 0 5px;
+				border-bottom: 2px solid #ccc;
+				border-radius: 0;
+				box-shadow: 0 0 2px rgba(0,0,0,0), 0 2px 4px rgba(0,0,0,0);
+				@include transition(all, 350ms, ease-in-out);
+
+				&:hover {
+					background: transparent;
+					border-bottom: 2px solid #333;
+					box-shadow: 0 0 2px rgba(0,0,0,0), 0 2px 4px rgba(0,0,0,0);
+				}
+			}
+		}
+
+		&__messages {
+			padding: 0 55px;
+		}
+
+		&__nick {
+			font: 14px $pn-r;
+		}
+
+		&__message {
+
+			&__txt {
+				position: relative;
+				margin-top: 8px;
+				border-radius: 2px;
+				box-shadow: 0 1px 2px 0 rgba(0,0,0,.04);
+				padding: 10px 20px;
+				background: #fff;
+
+				&:before {
+					content: '';
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 5px 5px 5px;
+					border-color: transparent transparent #fff transparent;
+					position: absolute;
+					top: -5px; left: 10px;
+				}
+			}
+
+			&__popup {
+				border: 0;
+				box-shadow: 0 1px 2px 0 rgba(0,0,0,.08);
+			}
+		}
+
+		&__footer {
+			display: none;
+		}
+	}
+}
+
 footer {
 	font: 12px $pn-l;
 	padding-bottom: 3vh;
